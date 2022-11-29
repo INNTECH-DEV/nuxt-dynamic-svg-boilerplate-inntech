@@ -10,15 +10,16 @@
                     <SvgRender :width="20" :height="20" :icon="item.icon" />
                 </div>
             </div>
+            <!-- Example of dynamic switching between SVGs -->
             <div class="flex flex-col items-center">
                 <p class="pb-2 font-bold">Example of dynamic switching SVGs:</p>
                 <div class="relative w-60 cursor-pointer group px-5 border-t-[1px]">
 
-                    <div class="flex p-2 justify-between items-center  hover:bg-slate-50 ">
-                        <div class="">
+                    <div class="flex p-2 justify-between items-center hover:bg-slate-50 ">
+                        <div>
                             <p>Language:</p>
                         </div>
-                        <div class="flex gap-1 items-center  px-3 ">
+                        <div class="flex gap-1 items-center px-3 ">
                             <div class="flex gap-2 items-center">
                                 <p class="text-primary">{{ flags[selectedLanguage].name }}</p>
                                 <SvgRender :icon="flags[selectedLanguage].icon" />
@@ -26,9 +27,9 @@
                             <div
                                 class="group-hover:visible group-hover:opacity-100 duration-500 opacity-0 absolute invisible left-0 p-5 h-max top-10 w-60 shadow-md ">
                                 <div v-for="(item, index) in flags" v-bind:key="index">
-                                    <div class=" flex justify-between w-full py-2 px-2 hover:bg-slate-50 rounded-lg"
+                                    <div class="flex justify-between w-full py-2 px-2 hover:bg-slate-50 rounded-lg"
                                         @click="selectedLanguage = item.id">
-                                        <p class="">{{ item.name }}</p>
+                                        <p>{{ item.name }}</p>
                                         <SvgRender :icon="item.icon" />
                                     </div>
                                 </div>
