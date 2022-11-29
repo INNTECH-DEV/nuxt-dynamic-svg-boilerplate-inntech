@@ -1,5 +1,7 @@
 ## Render SVGs dynamically in Nuxt 3
 
+If you too spent hours figuring out how to render SVGs dynamically, you can check out our solution.
+
 ## How would we usually do it in Vue?
 
 Our solution to render SVGs dynamically came when we tried to migrate one of our projects from Vue3 to Nuxt3. In Vue3 we had a file_svg.SVG document where we would store all our icons and give each and every single one of them an id. Based on that id we would render the icons using require().
